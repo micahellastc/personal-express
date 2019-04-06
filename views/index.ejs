@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Studio Ghibli</title>
+  <link rel="shortcut icon" href="public/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Oxygen" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <img src="21savage.png" alt="">
+    <h1>Featuring Studio Ghibli Films</h1>
+
+    <section id="container"></section>
+    <div class="review">
+
+    <h2>Add a review</h2>
+    <ul class="messages">
+    <% for(var i=0; i<messages.length; i++) {%>
+      <li class="message">
+        <span><%= messages[i].name %></span>
+        <span><%= messages[i].msg %></span>
+        <span><%= messages[i].thumbUp %></span>
+        <span><i class="fas fa-star" aria-hidden="true"></i></span>
+        <span><i class="fas fa-trash-alt" aria-hidden="true"></i></span>
+      </li>
+    <% } %>
+    </ul>
+
+
+
+    <form action="/messages" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="message" name="msg">
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+  </div>
+  <script src="main.js"></script>
+
+</body>
+</html>
