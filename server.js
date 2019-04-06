@@ -26,6 +26,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
   //console.log(db)
   db.collection('messages').find().toArray((err, result) => {
+    console.log("This is the result: ", result);
     if (err) return console.log(err)
     res.render('index.ejs', {messages: result})
   })

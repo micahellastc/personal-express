@@ -34,3 +34,11 @@ text-align: center;
 .review li {
   list-style: none;
 }
+input {
+  height: 30px;
+    font-size: 15px;
+}
+button {
+  height: 33px;
+    font-size: 15px;
+}
