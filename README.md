@@ -8,5 +8,5 @@
 
 ## Usage
 
-1. run `npm run savage`
+1. run `node server.js`
 2. Navigate to `localhost:3000`
